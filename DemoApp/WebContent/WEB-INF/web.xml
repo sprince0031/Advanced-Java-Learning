@@ -9,4 +9,13 @@
 	<servlet-name>add</servlet-name>
 	<url-pattern>/add</url-pattern>
 </servlet-mapping>
+
+<servlet>
+	<servlet-name>square</servlet-name>
+	<servlet-class>com.sprince0031.SquareServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>square</servlet-name>
+	<url-pattern>/square</url-pattern>
+</servlet-mapping>
 </web-app>

@@ -6,13 +6,21 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 
 public class AddServlet extends HttpServlet {
-    public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
     	PrintWriter out = res.getWriter();
     	int i = Integer.parseInt(req.getParameter("num1"));
     	int j = Integer.parseInt(req.getParameter("num2"));
     	out.println("<h1>The answer is...</h1>");
-    	out.println(i + j);
+//    	out.println(i + j);
+    	
+    	req.setAttribute("sum", i+j);
+    	
+    	RequestDispatcher rd = req.getRequestDispatcher("square");
+    	rd.forward(req, res);
+    	
     }
 }
