@@ -17,10 +17,12 @@ public class AddServlet extends HttpServlet {
     	out.println("<h1>The answer is...</h1>");
 //    	out.println(i + j);
     	
-    	req.setAttribute("sum", i+j);
-    	
-    	RequestDispatcher rd = req.getRequestDispatcher("square");
-    	rd.forward(req, res);
+    	res.sendRedirect("square?sum=" + (i+j)); // Session management: URL Rewriting.
+//    	RequestRedirect method
+//    	req.setAttribute("sum", i+j);
+//    	
+//    	RequestDispatcher rd = req.getRequestDispatcher("square");
+//    	rd.forward(req, res);
     	
     }
 }
