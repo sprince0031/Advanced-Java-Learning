@@ -3,10 +3,12 @@ package com.sprince0031;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpSession;
+//import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 
 public class AddServlet extends HttpServlet {
@@ -17,7 +19,15 @@ public class AddServlet extends HttpServlet {
     	out.println("<h1>The answer is...</h1>");
 //    	out.println(i + j);
     	
-    	res.sendRedirect("square?sum=" + (i+j)); // Session management: URL Rewriting.
+    	Cookie cookie = new Cookie("sum", "" + (i+j));
+    	res.addCookie(cookie);
+    	
+//    	Session management: using HttpSession object
+//    	HttpSession session = req.getSession();
+//    	session.setAttribute("sum", i + j);
+    	
+    	res.sendRedirect("square");
+//    	res.sendRedirect("square?sum=" + (i+j)); // No Session management: URL Rewriting.
 //    	RequestRedirect method
 //    	req.setAttribute("sum", i+j);
 //    	
