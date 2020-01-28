@@ -14,5 +14,6 @@
         "statusBarItem.hoverBackground": "#1a1a1a",
         "statusBar.foreground": "#e7e7e7"
     },
-    "peacock.color": "#000000"
+    "peacock.color": "#000000",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
