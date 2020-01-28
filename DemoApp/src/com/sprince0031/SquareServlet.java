@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+import javax.servlet.ServletContext;
 import javax.servlet.http.Cookie;
 
 public class SquareServlet extends HttpServlet {
@@ -28,5 +28,9 @@ public class SquareServlet extends HttpServlet {
 //		int sum = Integer.parseInt(req.getParameter("sum")); // For SendRedirect() - no session management by using URL Rewriting
 //		int sum = (int) req.getAttribute("sum"); // For RequestDispatcher
 		out.println("<h1>The square is... </h1>" + sum*sum);
+		
+		ServletContext context = getServletContext();
+		String cpyString = context.getInitParameter("copyright");
+		out.println("<br>ServletContext: " + cpyString);
 	}
 }

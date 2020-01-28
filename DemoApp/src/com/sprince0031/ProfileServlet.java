@@ -3,6 +3,7 @@ package com.sprince0031;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -40,8 +41,13 @@ public class ProfileServlet extends HttpServlet {
 			
 		}
 		
-		
-		
 		out.println("<h1>"+message+"</h1>");
+		
+		// Servlet context & Config
+		ServletConfig config = getServletConfig();
+		String copyrightStr = config.getInitParameter("copyright");
+		out.println("ServletConfig: " + copyrightStr);
+		
+		
 	}
 }

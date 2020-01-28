@@ -31,10 +31,20 @@
 <servlet>
 	<servlet-name>profile</servlet-name>
 	<servlet-class>com.sprince0031.ProfileServlet</servlet-class>
+	
+	<init-param>
+		<param-name>copyright</param-name>
+		<param-value>sprince0031 2020</param-value>
+	</init-param>
 </servlet>
 <servlet-mapping>
 	<servlet-name>profile</servlet-name>
 	<url-pattern>/profile</url-pattern>
 </servlet-mapping>
+
+<context-param>
+	<param-name>copyright</param-name>
+	<param-value>sprince0031</param-value>
+</context-param>
 
 </web-app>
