@@ -1,4 +1,5 @@
 <%@tag description="Overall Page template" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@attribute name="header" fragment="true" required="true"%>
 <%@attribute name="footer" fragment="true" required="true"%>
 <!DOCTYPE html>
@@ -41,7 +42,22 @@
                         <li><a class="page-scroll" href="timeline.html" style="text-decoration:none;">Archived questions</a></li>
                         <li><a class="page-scroll" href="#leaderboard" style="text-decoration:none;">Leader Board</a></li>
                         <li><a class="page-scroll" href="compiler.html" target="_blank" style="text-decoration:none;"><i class="glyphicon glyphicon-menu-left"></i> Code_Playground / <i class="glyphicon glyphicon-menu-right"></i></a></li> -->
-                        <li><a class="page-scroll" href="login.jsp" style="text-decoration:none;">Login</a></li>
+                        <c:choose>
+                            <c:when test="${loggedIn == false}">
+                                <li>
+                                    <a class="page-scroll" href="login.jsp" style="text-decoration:none;">
+                                        Login
+                                    </a>
+                                </li> 
+                            </c:when>
+                            <c:otherwise>
+                                <li>
+                                    <a class="page-scroll" href="profile.jsp" style="text-decoration:none;">
+                                        Welcome ${user}!
+                                    </a>
+                                </li> 
+                            </c:otherwise>
+                        </c:choose>
                     </ul>
                 </nav><!--- END NAV -->
             </div> 
