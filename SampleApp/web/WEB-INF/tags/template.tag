@@ -1,3 +1,6 @@
+<%@tag description="Overall Page template" pageEncoding="UTF-8"%>
+<%@attribute name="header" fragment="true" required="true"%>
+<%@attribute name="footer" fragment="true" required="true"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +17,7 @@
 
 </head>
 <body>
-    <div class="navbar navbar-custom navbar-fixed-top menu-top" style="background: #fff;">
+    <div id="pageHeader" class="navbar navbar-custom navbar-fixed-top menu-top" style="background: #fff;">
 
         <div class="container-fluid">
             <div class="navbar-header">
@@ -44,7 +47,38 @@
             </div> 
         </div><!--- END CONTAINER -->
         <!-- END NAVBAR -->
+        <%-- <jsp:invoke fragment="header"/> --%>
     </div>
+
+    <div id="body">
+        <jsp:doBody/>
+    </div>
+
+    <!-- start footer -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <a href="index.html">
+                        <img src="logo.png" alt="The BeEm Initiative" height="50px" width="60px">
+                    </a>
+                </div> -->
+                <%-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <p>
+                    <img src="logo.png" alt="The BeEm Initiative" height="70px" width="80px" style="margin-right:10px; margin-top: -30px;">
+                    </p>
+                </div> --%>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <p>
+                    Made with <i class="glyphicon glyphicon-heart" style="color:red;"></i> and lots of <span style="color:whitesmoke;"><i class="glyphicon glyphicon-menu-left"></i><span style="font-size: 18px; font-weight:bold;">/</span><i class="glyphicon glyphicon-menu-right"></i></span> by <a href="https://github.com/sprince0031">Sprince0031</a>.
+                    </p>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
 
 </body>
 </html>

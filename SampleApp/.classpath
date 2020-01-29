@@ -43,4 +43,6 @@
 	<classpathentry kind="output" path="build/WEB-INF/classes/com/sprince0031"/>
 	<classpathentry kind="src" output="target/classes" path="src/com/sprince0031"/>
 	<classpathentry exported="true" kind="lib" path="C:/Program Files/apache-tomcat-8.5.50/lib/servlet-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Code/Advanced-Java-Learning/SampleApp/web/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Code/Advanced-Java-Learning/SampleApp/web/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar"/>
 </classpath>
