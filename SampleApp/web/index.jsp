@@ -1,23 +1,19 @@
 <%@ page contentType='text/HTML' pageEncoding='UTF-8'%>
 <%@ page isELIgnored="false" %>
-<%-- <%@ include file="template.jsp" %> --%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
-<%-- <% session.setAttribute("loggedin", false);%> --%>
-<%-- <% if (request.getSession().getAttribute("loggedin")) {
-     %> --%>
 <% 
     try {
         if (session.getAttribute("loggedin").toString().equals("true")) {
-            request.setAttribute("username", request.getSession().getAttribute("username"));
-            request.setAttribute("link", "profile.jsp");
+            session.setAttribute("username", session.getAttribute("username"));
+            session.setAttribute("link", "profile.jsp");
         } else {
-            request.setAttribute("username", "Login");
-            request.setAttribute("link", "login.jsp");
+            session.setAttribute("username", "Login");
+            session.setAttribute("link", "login.jsp");
         }
     } catch(Exception ex) {
-        request.setAttribute("loggedin", false);
-        request.setAttribute("username", "Login");
-        request.setAttribute("link", "login.jsp");
+        session.setAttribute("loggedin", false);
+        session.setAttribute("username", "Login");
+        session.setAttribute("link", "login.jsp");
     }
 %>
 <t:template username="${username}" link="${link}">

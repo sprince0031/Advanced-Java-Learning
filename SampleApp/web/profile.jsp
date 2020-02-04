@@ -20,13 +20,6 @@
     }
 %>
 <t:template username="${username}" link="${link}">
-    <jsp:attribute name="header">
-        <li>
-            <form action="logout" method="POST">
-                <button id="logout-button"><i class="glyphicon glyphicon-off"></i></button>
-            </form>
-        </li>
-    </jsp:attribute>
     <jsp:body>
         <div class="jumbotron">
             <br><br><br>

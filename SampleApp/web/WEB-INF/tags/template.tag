@@ -32,7 +32,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="index.jsp" class="navbar-brand">
-                    <h1 style="margin-top: -8px; color: #000;">My Sample App</h1>
+                    <h1>My Sample App</h1>
                     <!--<img src="#" alt="logo">-->
                 </a>
             </div>
@@ -46,6 +46,13 @@
                         <li><a class="page-scroll" href="#leaderboard" style="text-decoration:none;">Leader Board</a></li>
                         <li><a class="page-scroll" href="compiler.html" target="_blank" style="text-decoration:none;"><i class="glyphicon glyphicon-menu-left"></i> Code_Playground / <i class="glyphicon glyphicon-menu-right"></i></a></li> -->
                         <li><a class="page-scroll" href="${link}" style="text-decoration:none;">${username}</a></li>
+                        <c:if test="${loggedin}">
+                            <li>
+                                <form action="logout" method="POST">
+                                    <button id="logout-button"><i class="glyphicon glyphicon-off"></i></button>
+                                </form>
+                            </li>
+                        </c:if>
                         <jsp:invoke fragment="header"/>
                         <%-- <c:choose>
                             <c:when test="${session.getAttribute("loggedin").equals("true")}">

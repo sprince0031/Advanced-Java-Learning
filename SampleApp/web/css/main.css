@@ -65,8 +65,15 @@ body {
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999;
+    background: var(--primary-background-colour) !important;
 
 }
+
+.navbar .navbar-header a.navbar-brand h1 {
+    margin-top: -8px;
+    color: var(--primary-brand-colour);
+}
+
 .navbar ul.nav li a {
     color: #fff;
     text-decoration: none;
@@ -75,24 +82,34 @@ body {
 }
 
 .navbar ul.nav li a:hover {
-    color: #b00;
+    color: #e00;
     background: rgba(0,0,0,0);
     border: 1px solid #b00;
 }
 
-.navbar ul.nav li form button#logout-button {
-    color: #b00;
+.navbar #logout-button {
+    color: #e00;
     text-decoration: none;
-    background: #000;
+    background: rgba(0,0,0,0);
     border: none;
     padding-top: 0.1em;
-    margin-bottom: -0.1em;
+    margin-bottom: -0.2em;
     font-size: 3em;
 }
 
 /* 
 * Footer
 */
+footer {
+    background: #101010;
+    color: whitesmoke;
+    padding-top: 0.1em;
+}
+
+footer a {
+    color: whitesmoke;
+    text-decoration: underline;
+}
 
 footer .row div {
     text-align: center;
