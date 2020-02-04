@@ -76,6 +76,24 @@ body {
 
 .navbar ul.nav li a:hover {
     color: #b00;
-    background: #fff;
+    background: rgba(0,0,0,0);
     border: 1px solid #b00;
+}
+
+.navbar ul.nav li form button#logout-button {
+    color: #b00;
+    text-decoration: none;
+    background: #000;
+    border: none;
+    padding-top: 0.1em;
+    margin-bottom: -0.1em;
+    font-size: 3em;
+}
+
+/* 
+* Footer
+*/
+
+footer .row div {
+    text-align: center;
 }

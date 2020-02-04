@@ -2,16 +2,23 @@
 <%-- <%@ include file="template.jsp" %> --%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<t:template>
-    <jsp:attribute name="header"></jsp:attribute>
-    <jsp:attribute name="footer"></jsp:attribute>
+<%-- <% 
+    if (session.getAttribute("loggedin").toString().equals("true")) {
+        request.setAttribute("username", request.getSession().getAttribute("username"));
+        request.setAttribute("link", "profile.jsp");
+    } else {
+        request.setAttribute("username", "Login");
+        request.setAttribute("link", "login.jsp");
+    }
+%> --%>
+<t:template username="${username}" link="${link}">
     <jsp:body>
         <br><br><br>
         <div class="container">
             <form action="login" method="POST" id="loginForm">
                 Username: <input type="text" name="user"><br>
-                Password: <input type="text" name="pass"><br>
-                <input type="submit">
+                Password: <input type="password" name="pass"><br>
+                <input type="submit" value="Login">
             </form>
         </div>
     </jsp:body>

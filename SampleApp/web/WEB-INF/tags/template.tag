@@ -1,7 +1,10 @@
 <%@tag description="Overall Page template" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@attribute name="header" fragment="true" required="true"%>
-<%@attribute name="footer" fragment="true" required="true"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@attribute name="header" fragment="true" required="false"%>
+<%@attribute name="footer" fragment="true" required="false"%>
+<%@attribute name="username" required="false" %>
+<%@attribute name="link" required="false" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,8 +45,10 @@
                         <li><a class="page-scroll" href="timeline.html" style="text-decoration:none;">Archived questions</a></li>
                         <li><a class="page-scroll" href="#leaderboard" style="text-decoration:none;">Leader Board</a></li>
                         <li><a class="page-scroll" href="compiler.html" target="_blank" style="text-decoration:none;"><i class="glyphicon glyphicon-menu-left"></i> Code_Playground / <i class="glyphicon glyphicon-menu-right"></i></a></li> -->
-                        <c:choose>
-                            <c:when test="${loggedIn == false}">
+                        <li><a class="page-scroll" href="${link}" style="text-decoration:none;">${username}</a></li>
+                        <jsp:invoke fragment="header"/>
+                        <%-- <c:choose>
+                            <c:when test="${session.getAttribute("loggedin").equals("true")}">
                                 <li>
                                     <a class="page-scroll" href="login.jsp" style="text-decoration:none;">
                                         Login
@@ -53,17 +58,17 @@
                             <c:otherwise>
                                 <li>
                                     <a class="page-scroll" href="profile.jsp" style="text-decoration:none;">
-                                        Welcome ${user}!
+                                        Welcome ${session.getAttribute("username")}!
                                     </a>
                                 </li> 
                             </c:otherwise>
-                        </c:choose>
+                        </c:choose> --%>
                     </ul>
                 </nav><!--- END NAV -->
             </div> 
         </div><!--- END CONTAINER -->
         <!-- END NAVBAR -->
-        <%-- <jsp:invoke fragment="header"/> --%>
+        
     </div>
 
     <div id="body">
@@ -84,13 +89,13 @@
                     <img src="logo.png" alt="The BeEm Initiative" height="70px" width="80px" style="margin-right:10px; margin-top: -30px;">
                     </p>
                 </div> --%>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
-                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <%-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div> --%>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <p>
                     Made with <i class="glyphicon glyphicon-heart" style="color:red;"></i> and lots of <span style="color:whitesmoke;"><i class="glyphicon glyphicon-menu-left"></i><span style="font-size: 18px; font-weight:bold;">/</span><i class="glyphicon glyphicon-menu-right"></i></span> by <a href="https://github.com/sprince0031">Sprince0031</a>.
                     </p>
                 </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                <%-- <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div> --%>
             </div>
         </div>
     </footer>
