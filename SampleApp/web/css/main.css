@@ -98,6 +98,20 @@ body {
 }
 
 /* 
+* inner body
+*/
+#body {
+    height: 100%;
+}
+
+/* 
+* Jumbotron
+*/
+.jumbotron {
+    text-align: center;
+}
+
+/* 
 * Footer
 */
 footer {

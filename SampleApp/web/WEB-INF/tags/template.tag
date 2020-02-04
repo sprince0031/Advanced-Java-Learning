@@ -1,5 +1,6 @@
 <%@tag description="Overall Page template" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@attribute name="head" fragment="true" required="false"%>
 <%@attribute name="header" fragment="true" required="false"%>
 <%@attribute name="footer" fragment="true" required="false"%>
 <%@attribute name="username" required="false" %>
@@ -18,7 +19,7 @@
     
     <!-- Latest compiled and minified CSS (Bootstrap)-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <jsp:invoke fragment="head"/>
 </head>
 <body>
     <div id="pageHeader" class="navbar navbar-custom navbar-fixed-top menu-top" style="background: #fff;">
