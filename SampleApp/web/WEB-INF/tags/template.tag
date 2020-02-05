@@ -39,13 +39,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <nav>
-                    <ul class="nav navbar-nav navbar-right" style="color:#000;">
-                        <!-- <li><a class="page-scroll" href="#home" style="text-decoration:none !important;">Home</a></li>
-                        <li><a class="page-scroll" href="#footer" style="text-decoration:none;">About</a></li>
-                        <li><a class="page-scroll" href="#questions" style="text-decoration:none;">Questions of the week</a></li>
-                        <li><a class="page-scroll" href="timeline.html" style="text-decoration:none;">Archived questions</a></li>
-                        <li><a class="page-scroll" href="#leaderboard" style="text-decoration:none;">Leader Board</a></li>
-                        <li><a class="page-scroll" href="compiler.html" target="_blank" style="text-decoration:none;"><i class="glyphicon glyphicon-menu-left"></i> Code_Playground / <i class="glyphicon glyphicon-menu-right"></i></a></li> -->
+                    <ul class="nav navbar-nav navbar-right">
                         <li><a class="page-scroll" href="${link}" style="text-decoration:none;">${username}</a></li>
                         <c:if test="${loggedin}">
                             <li>
@@ -55,22 +49,6 @@
                             </li>
                         </c:if>
                         <jsp:invoke fragment="header"/>
-                        <%-- <c:choose>
-                            <c:when test="${session.getAttribute("loggedin").equals("true")}">
-                                <li>
-                                    <a class="page-scroll" href="login.jsp" style="text-decoration:none;">
-                                        Login
-                                    </a>
-                                </li> 
-                            </c:when>
-                            <c:otherwise>
-                                <li>
-                                    <a class="page-scroll" href="profile.jsp" style="text-decoration:none;">
-                                        Welcome ${session.getAttribute("username")}!
-                                    </a>
-                                </li> 
-                            </c:otherwise>
-                        </c:choose> --%>
                     </ul>
                 </nav><!--- END NAV -->
             </div> 
