@@ -29,8 +29,8 @@
                 <div class="formField"><input type="password" name="pass" placeholder="Password"></div><br>
                 <div class="formField"><input type="password" name="re-pass" placeholder="Retype Password"></div><br>
                 <div class="formField"><input type="text" name="email" placeholder="Email"></div><br>
-                <div class="formField"><input type="date" name="pass" placeholder="Date of Birth"></div><br>
-                <div class="formField"><input type="number" name="pass" placeholder="Phone Number"></div><br>
+                <div class="formField"><input type="text" name="dob" placeholder="Date of Birth dd-mm-yyy"></div><br>
+                <div class="formField"><input type="number" name="phnumber" placeholder="Phone Number"></div><br>
                 <input id="login-button" type="submit" value="Register" />
             </form>
         </div>
