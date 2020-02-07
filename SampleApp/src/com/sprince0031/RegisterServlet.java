@@ -6,7 +6,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,11 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.sprince0031.DBConnection;
+public class RegisterServlet extends HttpServlet {
 
-public class LoginServlet extends HttpServlet {
-
-    public boolean authenticate(String user, String pass) throws SQLException {
+    public boolean register(String user, String pass) throws SQLException {
 
         Connection connection = new DBConnection().getConnection();
         String sqlStatement = "SELECT username, pass FROM users WHERE username = ?";
@@ -40,17 +37,20 @@ public class LoginServlet extends HttpServlet {
         return false;
     }
 
-    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         String user = request.getParameter("user");
         String pass = request.getParameter("pass");
+        // String pass = request.getParameter("re-pass");
+        String email = request.getParameter("email");
+        String dob = request.getParameter("dob");
+        String phone = request.getParameter("phnumber");
   
         HttpSession session = request.getSession();
-        System.out.println("<br><br><br><br><br>before authenticating...");
+        // System.out.println("<br><br><br><br><br>before authenticating...");
         try {
-            if (authenticate(user, pass)) {
+            if (register(user, pass)) {
                 System.out.println("<br><br><br><br><br>Successfully authenticated!");
                 session.setAttribute("loggedin", true);
                 session.setAttribute("username", user);

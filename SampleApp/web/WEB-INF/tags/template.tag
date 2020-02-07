@@ -40,7 +40,7 @@
             <div class="navbar-collapse collapse">
                 <nav>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="page-scroll" href="${link}" style="text-decoration:none;">${username}</a></li>
+                        <li><a id="login-button" class="page-scroll" href="${link}" style="text-decoration:none;">${username}</a></li>
                         <c:if test="${loggedin}">
                             <li>
                                 <form action="logout" method="POST">
@@ -62,27 +62,26 @@
     </div>
 
     <!-- start footer -->
-    <footer id="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                    <a href="index.html">
-                        <img src="logo.png" alt="The BeEm Initiative" height="50px" width="60px">
-                    </a>
-                </div> -->
-                <%-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <p>
-                    <img src="logo.png" alt="The BeEm Initiative" height="70px" width="80px" style="margin-right:10px; margin-top: -30px;">
-                    </p>
-                </div> --%>
-                <%-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div> --%>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <p>
-                    Made with <i class="glyphicon glyphicon-heart" style="color:red;"></i> and lots of <span style="color:whitesmoke;"><i class="glyphicon glyphicon-menu-left"></i><span style="font-size: 18px; font-weight:bold;">/</span><i class="glyphicon glyphicon-menu-right"></i></span> by <a href="https://github.com/sprince0031">Sprince0031</a>.
-                    </p>
-                </div>
-                <%-- <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div> --%>
+    <footer id="footer" class="container-fluid">
+        <div class="row">
+            <!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <a href="index.html">
+                    <img src="logo.png" alt="The BeEm Initiative" height="50px" width="60px">
+                </a>
+            </div> -->
+            <%-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <p>
+                <img src="logo.png" alt="The BeEm Initiative" height="70px" width="80px" style="margin-right:10px; margin-top: -30px;">
+                </p>
+            </div> --%>
+            <%-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div> --%>
+            <jsp:invoke fragment="footer"/>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p>
+                Made with <i class="glyphicon glyphicon-heart" style="color:red;"></i> and lots of <span style="color:whitesmoke;"><i class="glyphicon glyphicon-menu-left"></i><span style="font-size: 18px; font-weight:bold;">/</span><i class="glyphicon glyphicon-menu-right"></i></span> by <a href="https://github.com/sprince0031">Sprince0031</a>.
+                </p>
             </div>
+            <%-- <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div> --%>
         </div>
     </footer>
     <!-- end footer -->

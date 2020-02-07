@@ -8,11 +8,10 @@
              %>
             <script>console.out("Logged in")</script>
 <%     
-        }
-
-    } catch(Exception ex) { 
+        } 
+   
+    } catch(Exception ex) {
         session.setAttribute("username", "Login");
-
     }
 %>
 
@@ -24,15 +23,16 @@
     <jsp:body>
         <br><br><br>
         <div class="container">
-            <div class="form-header"><h2>Login</h2></div>
-            <form action="login" method="POST" id="form">
+            <div class="form-header"><h2>Register</h2></div>
+            <form action="register" method="POST" id="form">
                 <div class="formField"><input type="text" name="user" placeholder="Username"></div><br>
                 <div class="formField"><input type="password" name="pass" placeholder="Password"></div><br>
-                <input id="login-button" type="submit" value="Login" />
+                <div class="formField"><input type="password" name="re-pass" placeholder="Retype Password"></div><br>
+                <div class="formField"><input type="text" name="email" placeholder="Email"></div><br>
+                <div class="formField"><input type="date" name="pass" placeholder="Date of Birth"></div><br>
+                <div class="formField"><input type="number" name="pass" placeholder="Phone Number"></div><br>
+                <input id="login-button" type="submit" value="Register" />
             </form>
-            <div id="register-link">
-                <a href="register.jsp">Don't have an account? Register now!</a>
-            </div>
         </div>
     </jsp:body>
 </t:template>

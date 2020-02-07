@@ -8,6 +8,10 @@
             <script>console.out("Logged in")</script>
 <%     
         } else {
+             %>
+            <script>alert("Login first!")</script>
+<%     
+            session.setAttribute("username", "Login");
             response.sendRedirect("login.jsp");
         }
    

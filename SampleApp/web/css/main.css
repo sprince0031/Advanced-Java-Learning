@@ -6,9 +6,9 @@
     --main-border-colour: #ddd;
     /* --primary-background-colour: #f8f8f8;
     --secondary-background-colour: #ececec; */
-    --primary-background-colour: #000;
-    --secondary-background-colour: #101010;
-    --primary-brand-colour: #ddd;
+    --primary-background-colour: #eee;
+    --secondary-background-colour: #2e6cd1;
+    --primary-brand-colour: #eee;
 }
 
 * {
@@ -65,7 +65,8 @@ body {
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999;
-    background: var(--primary-background-colour) !important;
+    display: inline-block;
+    background: var(--secondary-background-colour) !important;
 
 }
 
@@ -74,34 +75,38 @@ body {
     color: var(--primary-brand-colour);
 }
 
-.navbar ul.nav li a {
-    color: #fff;
+.navbar ul.nav li a#login-button {
+    color: var(--secondary-background-colour);
     text-decoration: none;
-    background: #b00;
-    border: 1px solid #b00;
+    font-weight: bolder;
+    background: var(--primary-background-colour);
+    border: 1.5px solid var(--main-border-colour);
+    margin:  0.5em;
+    padding: 0.5em 1em;
+    border-radius: 35%/50%;
 }
 
-.navbar ul.nav li a:hover {
-    color: #e00;
+.navbar ul.nav li a#login-button:hover {
+    color: var(--primary-background-colour);
     background: rgba(0,0,0,0);
-    border: 1px solid #b00;
 }
 
-.navbar #logout-button {
-    color: #e00;
+.navbar nav ul.nav li #logout-button {
+    color: var(--primary-background-colour);
     text-decoration: none;
-    background: rgba(0,0,0,0);
+    background: var(--secondary-background-colour);
     border: none;
-    padding-top: 0.1em;
-    margin-bottom: -0.2em;
-    font-size: 3em;
+    padding-top: 0.2em;
+    /* margin-bottom: -0.2em; */
+    font-size: 2.4em;
+    align-self: center;
 }
 
 /* 
 * inner body
 */
 #body {
-    height: 100%;
+    height: 91%;
 }
 
 /* 
@@ -117,11 +122,16 @@ body {
 footer {
     background: #101010;
     color: whitesmoke;
-    padding-top: 0.1em;
+    padding: 1em 0.5em;
 }
 
 footer a {
     color: whitesmoke;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: var(--secondary-background-colour);
     text-decoration: underline;
 }
 
