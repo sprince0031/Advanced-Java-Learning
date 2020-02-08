@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.sprince0031.DBConnection;
-import com.sprince0031.BCrypt;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class RegisterServlet extends HttpServlet {
 
