@@ -52,14 +52,14 @@ version="3.1">
     <url-pattern>/logout</url-pattern>
   </servlet-mapping>
 
-  <servlet>
-    <servlet-name>register</servlet-name>
-    <servlet-class>com.sprince0031.RegisterServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>register</servlet-name>
-    <url-pattern>/register</url-pattern>
-  </servlet-mapping>
+    <servlet>
+      <servlet-name>register</servlet-name>
+      <servlet-class>com.sprince0031.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>register</servlet-name>
+      <url-pattern>/register</url-pattern>
+    </servlet-mapping>
 
   
 <!-- 

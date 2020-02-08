@@ -16,10 +16,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.sprince0031.DBConnection;
+import com.sprince0031.BCrypt;
 
 public class LoginServlet extends HttpServlet {
 
-    public boolean authenticate(String user, String pass) throws SQLException {
+    public boolean authenticate(String user, String passwordToHash) throws SQLException {
 
         Connection connection = new DBConnection().getConnection();
         String sqlStatement = "SELECT username, password FROM users WHERE username = ?";
@@ -30,7 +31,7 @@ public class LoginServlet extends HttpServlet {
         // System.out.println("<br><br><br><br><br>somethingfailed-2");
         while(resultSet.next()) {
             // System.out.println("username: " + resultSet.getString("username") + ", password: " + resultSet.getString("pass"));
-            if (user.equals(resultSet.getString("username")) && pass.equals(resultSet.getString("password"))) {
+            if (user.equals(resultSet.getString("username")) && BCrypt.checkpw(passwordToHash, resultSet.getString("password"))) {
                 
                 connection.close();
                 return true;
@@ -45,12 +46,12 @@ public class LoginServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         String user = request.getParameter("user");
-        String pass = request.getParameter("pass");
+        String passwordToHash = request.getParameter("pass");
   
         HttpSession session = request.getSession();
         // System.out.println("<br><br><br><br><br>before authenticating...");
         try {
-            if (authenticate(user, pass)) {
+            if (authenticate(user, passwordToHash)) {
                 // System.out.println("<br><br><br><br><br>Successfully authenticated!");
                 session.setAttribute("loggedin", true);
                 session.setAttribute("username", user);

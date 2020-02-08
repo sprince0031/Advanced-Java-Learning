@@ -18,6 +18,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.sprince0031.DBConnection;
+import com.sprince0031.BCrypt;
+
 public class RegisterServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -25,8 +28,9 @@ public class RegisterServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         System.out.println("hello there!");
         String user = request.getParameter("user");
-        String pass = request.getParameter("pass");
-        // String pass = request.getParameter("re-pass");
+        String passwordToHash = request.getParameter("pass");
+        String hashedPassword = BCrypt.hashpw(passwordToHash, BCrypt.gensalt(12));
+
         String email = request.getParameter("email");
         String dobToParse = request.getParameter("dob");
         System.out.println(dobToParse);
@@ -37,7 +41,7 @@ public class RegisterServlet extends HttpServlet {
             pe.printStackTrace();
         }
         
-        int phone = Integer.parseInt(request.getParameter("phnumber"));
+        long phone = Long.parseLong(request.getParameter("phnumber"));
 
         try {
             Connection connection = new DBConnection().getConnection();
@@ -48,12 +52,12 @@ public class RegisterServlet extends HttpServlet {
             prepStatement.setString(1, user);
             prepStatement.setString(2, email);
             prepStatement.setDate(3, new java.sql.Date(dob.getTime()));
-            prepStatement.setInt(4, phone);
+            prepStatement.setLong(4, phone);
             prepStatement.executeUpdate();
             String prepSQLuser = "INSERT INTO users (username, password) VALUES (?, ?)";
             prepStatement = connection.prepareStatement(prepSQLuser);
             prepStatement.setString(1, user);
-            prepStatement.setString(2, pass);
+            prepStatement.setString(2, hashedPassword);
             prepStatement.executeUpdate();
             HttpSession session = request.getSession();
             connection.close();

@@ -160,6 +160,7 @@
       <property name="foo.jar"
                value="/path/to/foo.jar"/>
     -->
+    <property name="BCrypt.jar" value="./web/WEB-INF/lib/BCrypt-0.4.jar"/>
     
     
     <!-- ==================== Compilation Classpath =========================== -->
@@ -179,6 +180,7 @@
     
         <!-- Include all JAR files that will be included in /WEB-INF/lib -->
         <!-- *** CUSTOMIZE HERE AS REQUIRED BY YOUR APPLICATION *** -->
+        <pathelement location="${BCrypt.jar}"/>
     <!--
         <pathelement location="${foo.jar}"/>
     -->
@@ -192,6 +194,14 @@
           <include name="*.jar"/>
         </fileset>
     
+      </path>
+
+      <!-- === Build classpath for external dependencies in /lib folder === -->
+      <path id="build.classpath">
+        <fileset dir="${web.home}/WEB-INF/lib">
+          <include name="**/*.jar"/>
+          <include name="**/*.zip"/>
+        </fileset>
       </path>
     
     
@@ -450,6 +460,7 @@
     <!--
         <copy todir="${build.home}/WEB-INF/lib" file="${foo.jar}"/>
     -->
+        <copy todir="${build.home}/WEB-INF/lib" file="${BCrypt.jar}"/>
     
         <!-- Copy static files from external dependencies as needed -->
         <!-- *** CUSTOMIZE HERE AS REQUIRED BY YOUR APPLICATION *** -->
