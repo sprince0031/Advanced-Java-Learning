@@ -24,10 +24,16 @@
     }
 %>
 <t:template username="${username}" link="${link}">
+    <jsp:attribute name="head">
+        <%-- individual css --%>
+        <link rel="stylesheet" href="css/profile.css">
+        <script src="js/main.js"></script>
+    </jsp:attribute>
     <jsp:body>
-        <div class="jumbotron">
-            <br><br><br>
-            <h1>Ahoy there ${username}! This is a test</h1>
+        <div class="dashboard">
+            <div class="div1">
+                <h1>Welcome to your dashboard ${username}!</h1>
+            </div>
         </div>
     </jsp:body>
 </t:template>

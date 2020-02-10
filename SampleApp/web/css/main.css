@@ -56,15 +56,15 @@ body {
     line-height: 1.765;
     color: #000 !important;
     padding: 0;
-    }
+}
 
 /* 
 * Navbar
 */
 .navbar {
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
+    -webkit-box-shadow: 0 8px 6px -6px #2e6cd1;
+    -moz-box-shadow: 0 8px 6px -6px #2e6cd1;
+    box-shadow: 0 8px 6px -6px #2e6cd1;
     display: inline-block;
     background: var(--secondary-background-colour) !important;
 
@@ -103,26 +103,13 @@ body {
 }
 
 /* 
-* inner body
-*/
-#body {
-    height: 91%;
-}
-
-/* 
-* Jumbotron
-*/
-.jumbotron {
-    text-align: center;
-}
-
-/* 
 * Footer
 */
 footer {
     background: #101010;
     color: whitesmoke;
     padding: 1em 0.5em;
+    z-index: 100 !important;
 }
 
 footer a {

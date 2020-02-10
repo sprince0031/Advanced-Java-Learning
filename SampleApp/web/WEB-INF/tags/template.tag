@@ -22,7 +22,7 @@
     <jsp:invoke fragment="head"/>
 </head>
 <body>
-    <div id="pageHeader" class="navbar navbar-custom navbar-fixed-top menu-top" style="background: #fff;">
+    <header id="pageHeader" class="navbar navbar-custom navbar-fixed-top menu-top" style="background: #fff;">
 
         <div class="container-fluid">
             <div class="navbar-header">
@@ -55,14 +55,13 @@
         </div><!--- END CONTAINER -->
         <!-- END NAVBAR -->
         
-    </div>
+    </header>
 
-    <div id="body">
-        <jsp:doBody/>
-    </div>
-
+    <%-- <div id="body"> --%>
+    <jsp:doBody/>
+    <%-- </div> --%>
     <!-- start footer -->
-    <footer id="footer" class="container-fluid">
+    <footer id="footer" class="fixed-bottom container-fluid">
         <div class="row">
             <!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <a href="index.html">

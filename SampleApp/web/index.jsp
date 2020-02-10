@@ -17,10 +17,14 @@
     }
 %>
 <t:template username="${username}" link="${link}">
+    <jsp:attribute name="head">
+        <link rel="stylesheet" href="css/animation.css">
+    </jsp:attribute>
     <jsp:body>
-        <div class="jumbotron">
-            <br><br><br>
-            <h1>Ahoy there! This is a test</h1>
+        <div class="animation-container">
+            <div class="road">
+                <div class="road-shadow"></div>
+            </div>
         </div>
     </jsp:body>
 </t:template>

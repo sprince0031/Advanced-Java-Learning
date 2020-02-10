@@ -1,0 +1,22 @@
+:root {
+    --main-border-colour: #ddd;
+    /* --primary-background-colour: #f8f8f8;
+    --secondary-background-colour: #ececec; */
+    --primary-background-colour: #eee;
+    --secondary-background-colour: #2e6cd1;
+    --primary-brand-colour: #eee;
+}
+
+.dashboard {
+    height: 100vh;
+}
+
+.dashboard .div1 {
+    /* margin-top: 10%; */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(#e7dddd, #fff);
+}

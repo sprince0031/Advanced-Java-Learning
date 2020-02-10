@@ -7,6 +7,10 @@
     --primary-brand-colour: #eee;
 }
 
+#form-div {
+    height: 82vh;
+}
+
 .form-header {
     text-align: center;
     font-weight: 900;

@@ -22,7 +22,7 @@
     </jsp:attribute>
     <jsp:body>
         <br><br><br>
-        <div class="container">
+        <div id="form-div" class="container">
             <div class="form-header"><h2>Register</h2></div>
             <form action="register" method="POST" id="form">
                 <div class="formField"><input type="text" name="user" placeholder="Username"></div><br>
