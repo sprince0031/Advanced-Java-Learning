@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample App</title>
+    <title>Just For Laughs</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     
     <!-- CSS local files -->
@@ -33,7 +33,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="index.jsp" class="navbar-brand">
-                    <h1>My Sample App</h1>
+                    <h1>Just For Laughs</h1>
                     <!--<img src="#" alt="logo">-->
                 </a>
             </div>
@@ -60,27 +60,16 @@
     <%-- <div id="body"> --%>
     <jsp:doBody/>
     <%-- </div> --%>
+
     <!-- start footer -->
     <footer id="footer" class="fixed-bottom container-fluid">
         <div class="row">
-            <!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <a href="index.html">
-                    <img src="logo.png" alt="The BeEm Initiative" height="50px" width="60px">
-                </a>
-            </div> -->
-            <%-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                <p>
-                <img src="logo.png" alt="The BeEm Initiative" height="70px" width="80px" style="margin-right:10px; margin-top: -30px;">
-                </p>
-            </div> --%>
-            <%-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div> --%>
             <jsp:invoke fragment="footer"/>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <p>
                 Made with <i class="glyphicon glyphicon-heart" style="color:red;"></i> and lots of <span style="color:whitesmoke;"><i class="glyphicon glyphicon-menu-left"></i><span style="font-size: 18px; font-weight:bold;">/</span><i class="glyphicon glyphicon-menu-right"></i></span> by <a href="https://github.com/sprince0031">Sprince0031</a>.
                 </p>
             </div>
-            <%-- <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div> --%>
         </div>
     </footer>
     <!-- end footer -->
