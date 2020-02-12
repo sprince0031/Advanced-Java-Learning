@@ -60,6 +60,24 @@ version="3.1">
     <servlet-name>joke</servlet-name>
     <url-pattern>/joke</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>favtoggle</servlet-name>
+    <servlet-class>com.sprince0031.FavToggleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>favtoggle</servlet-name>
+    <url-pattern>/favtoggle</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>listfavs</servlet-name>
+    <servlet-class>com.sprince0031.ListFavsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>listfavs</servlet-name>
+    <url-pattern>/listfavs</url-pattern>
+  </servlet-mapping>
   
 <!-- 
   <context-param>

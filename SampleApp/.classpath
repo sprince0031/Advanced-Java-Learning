@@ -46,4 +46,5 @@
 	<classpathentry exported="true" kind="lib" path="E:/Code/Advanced-Java-Learning/SampleApp/web/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar"/>
 	<classpathentry exported="true" kind="lib" path="E:/Code/Advanced-Java-Learning/SampleApp/web/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar"/>
 	<classpathentry exported="true" kind="lib" path="E:/Code/Advanced-Java-Learning/SampleApp/web/WEB-INF/lib/BCrypt-0.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Code/Advanced-Java-Learning/SampleApp/web/WEB-INF/lib/gson-2.8.6.jar"/>
 </classpath>

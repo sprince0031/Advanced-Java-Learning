@@ -19,11 +19,10 @@
 <t:template username="${username}" link="${link}">
     <jsp:attribute name="head">
         <link rel="stylesheet" href="css/animation.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="js/jokegen.js"></script>
     </jsp:attribute>
     <jsp:body>
-        <div class="animation-container">
+        <div class="joke-container">
             <!-- <div class="road">
                 <div class="road-shadow"></div>
             </div> -->
@@ -33,6 +32,14 @@
                     <div id="punchline">Please login if you want to ensure no jokes are repeated.</div>
                 </div><br>
                 <button id="btn" type="submit" onclick="jokeGen()">Get Random Joke!</button>
+                <div class="row" id="btn-actions">
+                    <div id="fav-btn" onclick="favouriteAction()" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div id="share-btns" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
             </div>
 
         </div>

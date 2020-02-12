@@ -19,6 +19,13 @@
     
     <!-- Latest compiled and minified CSS (Bootstrap)-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- jQuery import -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4baab900e5.js" crossorigin="anonymous"></script>
+
     <jsp:invoke fragment="head"/>
 </head>
 <body>
@@ -67,7 +74,7 @@
             <jsp:invoke fragment="footer"/>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <p>
-                Made with <i class="glyphicon glyphicon-heart" style="color:red;"></i> and lots of <span style="color:whitesmoke;"><i class="glyphicon glyphicon-menu-left"></i><span style="font-size: 18px; font-weight:bold;">/</span><i class="glyphicon glyphicon-menu-right"></i></span> by <a href="https://github.com/sprince0031">Sprince0031</a>.
+                Made with <i class="fas fa-heart" style="color:red;"></i> and lots of <i class="fas fa-code" style="color:whitesmoke;"></i> by <a href="https://github.com/sprince0031">Sprince0031</a>.
                 </p>
             </div>
         </div>

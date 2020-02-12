@@ -27,13 +27,23 @@
     <jsp:attribute name="head">
         <%-- individual css --%>
         <link rel="stylesheet" href="css/profile.css">
-        <script src="js/main.js"></script>
+        <script src="js/jokegen.js"></script>
     </jsp:attribute>
     <jsp:body>
         <div class="dashboard">
             <div class="div1">
                 <h1>Welcome to your dashboard ${username}!</h1>
+                <div class="fav-list">
+                    <ul id="fav-list">
+                        <li></li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <script>
+            window.onload = function() {
+                listFavs();
+            };
+        </script>
     </jsp:body>
 </t:template>

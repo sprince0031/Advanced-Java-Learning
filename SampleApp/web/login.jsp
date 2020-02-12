@@ -6,7 +6,7 @@
         if (session.getAttribute("loggedin").toString().equals("true")) {
             response.sendRedirect("profile.jsp");
              %>
-            <script>console.out("Logged in")</script>
+            <script>console.log("Logged in")</script>
 <%     
         }
 

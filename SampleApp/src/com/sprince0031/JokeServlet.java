@@ -25,9 +25,10 @@ public class JokeServlet extends HttpServlet {
 
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
-        Integer id = Integer.parseInt(request.getParameter("id"));
         String username = session.getAttribute("username").toString();
-        if (!(username.equals("Login"))) {
+        Boolean loggedin = (Boolean)session.getAttribute("loggedin");
+        Integer id = Integer.parseInt(request.getParameter("id"));
+        if (loggedin) {
             System.out.println("logged in");
             try {
                 System.out.println("entered try");
